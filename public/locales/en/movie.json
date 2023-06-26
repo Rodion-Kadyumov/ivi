@@ -1,0 +1,108 @@
+{
+  "rating": {
+    "title": "Kinopoisk rating",
+    "estimate": "Estimate",
+    "grades": "amount grades",
+    "name": "rating"
+  },
+  "medallions": {
+    "rating": "Kinopoisk",
+    "ivi": "Rating"
+  },
+  "details": {
+    "show": "Show details",
+    "hide": "Hide details",
+    "langs": "Langs",
+    "subtitles": "Subtitles",
+    "quality": "Quality"
+  },
+  "trailer": {
+    "name": "Trailer",
+    "expand": "Expand trailer",
+    "movies": "Movies",
+    "free": "Free movies",
+    "watch": "Watch",
+    "subscription": "by subscription ivi",
+    "promo": "First 30 days of subscription for 1 ₽"
+  },
+  "params": {
+    "quality": "FullHD",
+    "lang": "Eng",
+    "subtitle": "Eng",
+    "year": "year"
+  },
+  "devices": {
+    "watch": "Watch",
+    "title": "on all devices",
+    "text": "The application is available for download on iOS, Android, SmartTV and set-top boxes",
+    "button": "Connect devices"
+  },
+  "related": {
+    "with": "With film",
+    "watch": "watch the same"
+  },
+  "comments": {
+    "comments": "Comments",
+    "leave": "Write a comment"
+  },
+  "creators": {
+    "title": "Actors and creators",
+    "more": "More",
+    "filmmaker": "Director",
+    "actor": "Actor",
+    "scenario": "Scenery",
+    "producer": "Producer",
+    "actordubbing": "Dubbing actor",
+    "painter": "Painter",
+    "operator": "Operator",
+    "composer": "Compositor",
+    "directors": "Directors",
+    "actors": "Actors",
+    "scenarists": "Scriptwriters",
+    "producers": "Producers",
+    "dubbing": "Dubbing",
+    "painters": "Artists",
+    "operators": "Operators",
+    "compositors": "Composers"
+  },
+  "movie-decl": [
+    "movie",
+    "movies",
+    "movies"
+  ],
+  "minute-decl": [
+    "minute",
+    "minutes",
+    "minutes"
+  ],
+  "months": [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ],
+  "modal": {
+    "backLink": "Back to movie",
+    "tabs": [
+      "Creators",
+      "Reviews"
+    ],
+    "commentsInput": {
+      "placeholder": "Write a review",
+      "submit": "Send",
+      "errors": [
+        "Must be more than 5 characters",
+        "Unable to post comment"
+      ]
+    },
+    "showButton": "Show more"
+  }
+}

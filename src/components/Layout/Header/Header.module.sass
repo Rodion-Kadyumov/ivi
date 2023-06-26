@@ -1,0 +1,43 @@
+@use 'src/styles/vars'
+@mixin dropDownActive
+  transition: .4s
+
+.header
+  position: relative
+
+  &__content
+    display: flex
+    align-items: center
+    justify-content: space-between
+    color: vars.$primaryColor
+    background: vars.$background
+    margin-inline: -12px
+    padding: 0 12px
+    height: 72px
+    font-size: 15px
+    line-height: 20px
+    font-weight: 500
+    font-style: normal
+    transition: .3s
+
+    &_active
+      background: #1F1B2E
+
+  &__dropdown
+    position: relative
+    z-index: 10
+
+    &-enter
+      opacity: 0
+
+      &-active
+        opacity: 1
+        @include dropDownActive
+
+    &-exit
+      opacity: 1
+      pointer-events: none
+
+      &-active
+        opacity: 0
+        @include dropDownActive

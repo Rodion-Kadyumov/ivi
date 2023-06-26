@@ -1,0 +1,79 @@
+@use "/src/styles/vars"
+
+.comment
+  position: relative
+
+  &__button
+    display: block
+    padding: 20px 20px 52px
+    background-color: #1f1b2e
+    transition: .3s
+    border-radius: 8px
+    overflow: hidden
+    text-align: start
+    cursor: pointer
+    width: 100%
+
+    &:hover
+      background-color: #231f34
+
+  &__content
+    font-size: 15px
+    line-height: 22px
+    font-weight: 400
+    height: 66px
+    -webkit-line-clamp: 3
+    white-space: normal
+    color: vars.$whiteTextColor
+    font-style: normal
+    display: -webkit-box
+    overflow: hidden
+    -webkit-box-orient: vertical
+    text-overflow: ellipsis
+
+  &__author
+    color: vars.$secondaryColor
+    margin-bottom: 8px
+    font-size: 13px
+    line-height: 16px
+    font-weight: 700
+    font-style: normal
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    min-height: 16px
+
+  &__date
+    position: absolute
+    left: 20px
+    bottom: 20px
+    color: vars.$secondaryColor
+    font-size: 13px
+    line-height: 16px
+    font-weight: 400
+    font-style: normal
+
+.votes
+  position: absolute
+  right: 20px
+  bottom: 20px
+  display: flex
+  align-items: center
+  z-index: 1
+
+.icon
+  &::after
+    font-family: var(--iconfont)
+    font-weight: 400
+    font-style: normal
+    color: rgba(126,121,143,.72)
+    width: 16px
+    height: 16px
+    font-size: 16px
+    line-height: 16px
+    transition: .3s
+  &_like::after
+    content: "\E3A4"
+
+  &_dislike::after
+    content: "\E39C"

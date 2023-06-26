@@ -1,0 +1,15 @@
+{
+  "years": {
+    "movies": "Movies of {{year}}",
+    "series": "Series of {{year}}",
+    "cartoons": "Cartoons of {{year}}"
+  },
+  "countries": {
+    "usa": "American",
+    "russia": "Russian",
+    "ussr": "Soviet movie",
+    "foreign": "Foreign",
+    "turkey": "Turkish",
+    "korea": "Korean"
+  }
+}

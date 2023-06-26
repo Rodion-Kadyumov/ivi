@@ -1,0 +1,19 @@
+@mixin headerLayout
+  display: flex
+  height: 100%
+  align-items: center
+
+.container
+  @include headerLayout
+
+  .logo
+    cursor: pointer
+
+  .content
+    @include headerLayout
+@media (max-width: 390px)
+  .container
+    .logo
+      width: 80%
+      img
+        width: 100%

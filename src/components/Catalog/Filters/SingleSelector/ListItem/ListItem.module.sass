@@ -1,0 +1,48 @@
+@use "src/styles/vars"
+
+@mixin defFlex
+  display: flex
+  align-items: center
+
+.item
+  @include defFlex
+  justify-content: space-between
+  font-size: 13px
+  line-height: 16px
+  font-weight: 500
+  color: rgba(217,215,224,.8)
+  transition: .4s
+  cursor: pointer
+
+  &:not(:first-child)
+    padding-top: 12px
+
+  &:hover, &_active
+    color: vars.$whiteTextColor
+
+  &:hover &__checkbox:not(&__checkbox_active)
+    opacity: .32
+
+  &__point
+    width: 4px
+    height: 4px
+    background: vars.$whiteTextColor
+    border-radius: 50%
+    opacity: 0
+
+  &__checkbox
+    @include defFlex
+    justify-content: center
+    width: 16px
+    height: 16px
+    border: 2px solid vars.$whiteTextColor
+    border-radius: 50%
+    opacity: 0
+    transition: .4s
+
+    &_active
+      opacity: 1
+      color: vars.$whiteTextColor
+
+      & > .item__point
+        opacity: 1

@@ -1,0 +1,35 @@
+@use "/src/styles/vars"
+
+.item
+  padding-top: 12px
+  display: flex
+  justify-content: space-between
+  font-size: 13px
+  line-height: 16px
+  font-weight: 500
+  color: rgba(217,215,224,.8)
+  transition: .4s
+  cursor: pointer
+
+  &:hover, &_active
+    color: vars.$whiteTextColor
+
+  &:hover &__checkbox
+    opacity: 1
+
+  &__checkbox
+    font-family: var(--iconfont)
+    width: 16px
+    height: 16px
+    font-size: 16px
+    line-height: 16px
+    opacity: 0
+    color: rgba(217,215,224,.8)
+    transition: .4s
+
+    &_active
+      opacity: 1
+      color: vars.$whiteTextColor
+
+    &::before
+      content: "\E348"

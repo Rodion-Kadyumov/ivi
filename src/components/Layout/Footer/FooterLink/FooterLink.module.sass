@@ -1,0 +1,10 @@
+@use '/src/styles/vars'
+
+.link
+  display: block
+  color: vars.$primaryColor
+  transition-duration: .4s
+  transition-property: color,box-shadow,opacity
+
+  &:hover, &:focus-visible
+    color: vars.$whiteTextColor

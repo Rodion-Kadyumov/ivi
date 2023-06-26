@@ -1,0 +1,81 @@
+@use 'sass:math'
+@use 'sass:color'
+@use 'vars'
+@use 'config'
+
+body
+  font-family: vars.$userfont, vars.$systemfont
+  font-size: vars.$fontsize
+  line-height: vars.$lineheight
+  color: vars.$textcolor
+  min-width: 320px
+  position: relative
+  overflow-x: hidden
+  background-color: #100e19
+  -webkit-font-smoothing: antialiased
+
+::placeholder
+  color: #666
+
+::selection
+  background-color: vars.$accent
+  color: vars.$whiteTextColor
+
+ul
+  list-style: none
+
+a
+  text-decoration: none
+  color: inherit
+
+  &:visited, &:active
+    color: inherit
+
+button
+  font-family: inherit
+  background: none
+
+input,
+textarea,
+button,
+select,
+a
+  -webkit-tap-highlight-color: transparent
+
+*
+  margin: 0
+  padding: 0
+  border: 0
+  outline: 0
+  box-sizing: border-box
+
+.unselectable
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+[data-tippy-root]
+  .tippy-box
+    background: none
+    .tippy-content
+      border-radius: 6px
+      font-size: 13px
+      line-height: 16px
+      background-color: #1f1b2e
+      border-radius: 6px
+      padding: 6px 8px
+      margin-left: -2px
+
+    .tippy-arrow
+      background-color: #1f1b2e
+      color: #1f1b2e
+      &::before
+        bottom: -5px
+        border-width: 7px 7px 0
+
+\:root
+  --toastify-color-dark: #1f1b2e !important
+  --toastify-color-progress-dark: #ea003d !important

@@ -1,0 +1,78 @@
+@use "/src/styles/vars"
+
+.section
+  padding: 24px 0
+
+.creators
+  display: flex
+  align-items: flex-start
+  flex-flow: 24px
+
+.creator
+  margin-right: 24px
+
+  &:nth-child(n+11)
+    display: none
+
+.button
+  width: 88px
+  height: 88px
+  cursor: pointer
+  user-select: none
+  font-weight: 500
+  color: vars.$secondaryColor
+  font-size: 15px
+  line-height: 88px
+  text-align: center
+  background-color: #1f1b2e
+  border-radius: 50%
+  transition: .3s
+
+  &:hover
+    background-color: #272038
+    color: #d9d4ee
+
+.title
+  margin-bottom: 24px
+
+@media (max-width: 1260px)
+  .creator:nth-child(n+10)
+    display: none
+
+@media (max-width: 1160px)
+  .creator:nth-child(n+9)
+    display: none
+
+@media (max-width: 1060px)
+  .creator:nth-child(n+8)
+    display: none
+
+@media (max-width: 950px)
+  .creator:nth-child(n+7)
+    display: none
+
+@media (max-width: 835px)
+  .creator:nth-child(n+6)
+    display: none
+
+@media (max-width: 725px)
+  .creator:nth-child(n+5)
+    display: none
+
+@media (max-width: 615px)
+  .creator:nth-child(n+5)
+    display: none
+
+@media (max-width: 600px)
+  .button
+    width: 72px
+    height: 72px
+    line-height: 72px
+
+@media (max-width: 563px)
+  .creator:nth-child(n+4)
+    display: none
+
+@media (max-width: 473px)
+  .creator:nth-child(n+3)
+    display: none

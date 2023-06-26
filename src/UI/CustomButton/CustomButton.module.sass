@@ -1,0 +1,93 @@
+@use '/src/styles/vars'
+
+@mixin flexDef
+  display: flex
+  align-items: center
+  justify-content: center
+
+.btn
+  @include flexDef
+  cursor: pointer
+  background-color: #1f1b2e
+  border: 1px solid #1f1b2e
+  color: vars.$whiteTextColor
+  font-size: vars.$fontsize
+  font-weight: 500
+  transition: .4s
+  height: 40px
+  padding: 9px 15px
+  line-height: 20px
+  border-radius: 8px
+
+  &:focus-visible
+    outline: 0
+
+  &:hover, &:focus-visible
+    background-color: #2e2844
+    border-color: #2e2844
+
+  &__content
+    @include flexDef
+    width: 100%
+
+  &_purple
+    font-size: 13px
+    line-height: 16px
+    height: 32px
+    padding: 7px 11px
+    background: linear-gradient(270deg, #ea003d 0, #c447ff 100%)
+    border: none
+
+    &:hover, &:focus-visible
+      background: linear-gradient(270deg, #ea003d 0, #c447ff 100%)
+      border: none
+
+  &_red
+    background-color: vars.$accent
+    border-color: vars.$accent
+
+    &:hover, &:focus-visible
+      background-color: #ff0f4d
+      border-color: #ff0f4d
+
+  &_promo
+    background-size: auto 48px
+    border: none
+
+    &:hover, &:focus-visible
+      background-color: #231f34
+      border: none
+
+  &_icon
+    width: 40px
+    padding: 0
+
+  &_dark
+    background-color: rgba(255, 255, 255, .08)
+    border: rgba(255, 255, 255, .08)
+    color: vars.$textcolor
+
+    &:hover
+      background-color: rgba(255, 255, 255, .16)
+      border: rgba(255, 255, 255, .16)
+
+  &_frame
+    background: none
+    border: 1px solid rgba(255, 255, 255, .32)
+    color: vars.$whiteTextColor
+
+    &:hover
+      background: none
+      border: 1px solid vars.$whiteTextColor
+  &_admin
+    background-color: vars.$accent
+    width: 20px
+    height: 140px
+    border-radius: 0 8px 8px 0
+    padding: 9px 10px
+    .btn__content
+      color: vars.$whiteTextColor
+      font-size: 14px
+      text-align: center
+      writing-mode: vertical-lr
+      -webkit-writing-mode: vertical-lr

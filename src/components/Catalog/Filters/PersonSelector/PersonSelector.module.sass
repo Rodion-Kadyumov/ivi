@@ -1,0 +1,66 @@
+@use "/src/styles/vars"
+@use "/src/styles/mixins"
+
+.selector
+  display: grid
+  gap: 4px
+  position: relative
+
+  &__input
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+    background-color: #312b45
+    height: 56px
+    border-radius: 4px
+
+    & > input
+      font-weight: 500
+      color: vars.$whiteTextColor
+      background: transparent
+      @include mixins.ellipsis
+      width: 80%
+      height: 100%
+      padding: 8px 16px
+
+    & > input::placeholder
+      color: rgba(255, 255, 255, .6)
+
+  &__reset
+    height: 100%
+    width: 50px
+    cursor: pointer
+    position: absolute
+    right: 0
+    color: vars.$textcolor
+    transition: .4s
+
+    &:hover
+      color: vars.$whiteTextColor
+      
+.dropdown
+  &-enter
+    opacity: 0
+    transform-origin: top
+    transform: scaleY(0)
+    visibility: hidden
+
+    &-active
+      opacity: 1
+      transform: scaleY(1)
+      visibility: visible
+      transition: .2s linear
+
+  &-exit
+    opacity: 1
+    transform-origin: top
+    transform: scaleY(1)
+    pointer-events: none
+    visibility: visible
+
+    &-active
+      opacity: 0
+      transform: scaleY(0)
+      visibility: hidden
+      transition: .2s linear

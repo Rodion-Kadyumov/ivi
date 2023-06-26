@@ -1,0 +1,126 @@
+@use "/src/styles/vars"
+@use "/src/styles/mixins"
+
+@mixin chatMessage
+  margin-top: 20px
+  padding: 16px
+  min-width: 420px
+  max-height: 72px
+
+@mixin chatMessageTitle
+  color: vars.$whiteTextColor
+  font-size: 15px
+  line-height: 20px
+  font-weight: 700
+  font-style: normal
+  @include mixins.ellipsis
+
+.chat
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    margin-top: 16px
+    padding-right: 100px
+
+  &__message
+    &_sent
+      @include chatMessage
+      @include chatMessageTitle
+      margin-right: -200px
+      background-color: #1f1b2e
+      border-radius: 16px 16px 0 16px
+
+.error
+  &-enter
+    opacity: 0
+    transform: translateY(100%)
+
+    &-active
+      opacity: 1
+      transform: translateY(0%)
+      transition: all .3s
+
+  &-exit
+    opacity: 1
+    transform: translateY(0%)
+
+    &-active
+      opacity: 0
+      transform: translateY(100%)
+      transition: all .3s
+
+.email
+  &-enter
+    opacity: 0
+    transform: translateY(200%)
+
+    &-active
+      opacity: 1
+      transform: translateY(0%)
+      transition: all .3s
+
+  &-exit
+    opacity: 1
+    transform: translateY(0%)
+
+    &-active
+      opacity: 0
+      transform: translateY(200%)
+      transition: all .3s
+
+.email__container
+  display: flex
+  align-items: center
+
+.change__email
+  position: relative
+  margin-top: 20px
+  margin-right: 20px
+  cursor: pointer
+  width: 40px
+  height: 40px
+  border-radius: 40px
+  background-color: transparent
+  border: 2px solid rgba(255, 255, 255, .32)
+  transition: .3s
+
+  &:hover
+    border-color: rgba(255, 255, 255, .70)
+
+  &:before
+    position: absolute
+    font-size: 16px
+    line-height: 16px
+    top: 25%
+    left: 30%
+    content: "\E0D6"
+    font-family: var(--iconfont)
+    color: vars.$whiteTextColor
+
+@media (max-width: 750px)
+
+  .email__container
+    width: 100%
+
+    .change__email
+      width: 40px
+      height: 40px
+
+  .chat
+    &__form
+      padding: 20px
+
+    &__message
+      &_sent
+        min-width: unset
+        margin-right: 0
+        width: 100%
+
+@media (max-width: 600px)
+  .email
+    width: 100%
+  .chat
+    &__form
+      align-items: flex-start
+      width: 100%

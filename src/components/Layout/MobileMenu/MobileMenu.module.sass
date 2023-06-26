@@ -1,0 +1,101 @@
+@use "/src/styles/vars"
+
+@mixin itemLink
+  font-family: var(--iconfont)
+  font-size: 20px
+  line-height: 20px
+  color: vars.$secondaryColor
+
+.container
+  position: fixed
+  display: flex
+  width: 101%
+  left: -1px
+  height: 48px
+  bottom: -1px
+  justify-content: center
+  z-index: 4
+  backdrop-filter: blur(8px)
+  background-color: rgba(31, 27, 46, .88)
+  box-shadow: 0 -20px 40px rgba(7, 5, 14, .24)
+
+  .content
+    display: flex
+    max-width: 700px
+    width: 100%
+    box-shadow: 0 -20px 40px rgba(7, 5, 14, .24)
+    box-sizing: border-box
+    height: 48px
+    justify-content: center
+
+    &__item
+      cursor: pointer
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      flex-basis: 100%
+      flex-grow: 1
+      flex-shrink: 1
+      max-width: 120px
+      padding-bottom: 4px
+      padding-top: 4px
+      position: relative
+
+      .icon
+        @include itemLink
+
+      &__home
+        &:before
+          content: "\E226"
+
+      &__catalogue
+        &:before
+          content: "\E07C"
+
+      &__search
+        &:before
+          content: "\E33D"
+
+      &__tv
+        &:before
+          content: "\E3A9"
+
+      &__more
+        &:before
+          content: "\E26A"
+
+      &__caption
+        align-self: center
+        color: vars.$secondaryColor
+        font-size: 10px
+        font-style: normal
+        font-weight: 500
+        height: 12px
+        line-height: 12px
+        max-width: 100%
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
+      .glow__image
+        background-image: url(https://solea-parent.dfs.ivi.ru/picture/7e798f,7e798f/tabBarGlow.svg)
+        background-position: 50% 50%
+        background-repeat: no-repeat
+        background-size: 64px 48px
+        height: 48px
+        left: 50%
+        opacity: 0
+        position: absolute
+        top: 0
+        transform: translateX(-50%)
+        width: 64px
+
+      .active
+        opacity: 1
+
+      .item_selected
+        color: vars.$whiteTextColor
+
+        &:before
+          color: vars.$whiteTextColor

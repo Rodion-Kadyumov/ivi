@@ -1,0 +1,60 @@
+@use "src/styles/vars"
+
+.container
+  display: flex
+  align-items: center
+  height: 100%
+  gap: 20px
+
+  .subscription__button
+    width: 213px
+    height: 32px
+    font-size: 13px
+    padding: 0
+    line-height: 16px
+    font-weight: 500
+
+.search
+  display: flex
+  gap: 5px
+  cursor: pointer
+  transition: .4s
+
+  &:hover
+    color: vars.$whiteTextColor
+
+  .icon
+    width: 24px
+    height: 24px
+
+.notifications
+  display: flex
+  cursor: pointer
+  transition: .4s
+
+  &:hover
+    color: vars.$whiteTextColor
+
+  svg
+    width: 24px
+    height: 24px
+
+.profile
+  cursor: pointer
+  height: 48px
+  border-radius: 8px
+  border: 2px solid rgba(255, 255, 255, .48)
+  padding: 12px
+  transition: .4s
+
+  &:hover
+    color: vars.$whiteTextColor
+    border-color: vars.$whiteTextColor
+
+  svg
+    width: 20px
+    height: 20px
+
+@media (max-width: 390px)
+  .container
+    gap: 5px

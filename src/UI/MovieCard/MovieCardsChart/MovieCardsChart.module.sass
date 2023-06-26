@@ -1,0 +1,16 @@
+@use "/src/styles/vars"
+
+.chart
+  margin-bottom: 12px
+  &__name
+    font-size: 13px
+    color: vars.$secondaryColor
+    text-transform: lowercase
+    margin-bottom: 4px
+
+  .chart__bar
+    width: 100%
+    height: 4px
+    background-color: rgba(165,161,178,.32)
+    border-radius: 2px
+    overflow: hidden

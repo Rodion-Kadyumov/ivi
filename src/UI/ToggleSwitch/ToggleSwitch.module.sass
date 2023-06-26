@@ -1,0 +1,45 @@
+@use '/src/styles/vars'
+
+.toggle
+  display: flex
+  align-items: center
+  justify-content: space-between
+  -webkit-tap-highlight-color: transparent
+  cursor: pointer
+  width: 90px
+  height: 45px
+  background: #231f34
+  border-radius: 100px
+  outline: 1px solid black
+  position: relative
+  transition: background-color .2s
+
+  &_active
+    pointer-events: none
+    opacity: .7
+
+  &__left, &__right
+    color: vars.$secondaryColor
+
+  &__left
+    margin-left: 11px
+
+  &__right
+    margin-right: 11px
+
+  &__button
+    position: absolute
+    top: 0 
+    width: 45px
+    height: 100%
+    border-radius: 50%
+    transition: .3s
+    opacity: .15
+    background: vars.$whiteTextColor
+    box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29)
+
+    &_left
+      left: 0
+      
+    &_right
+      left: calc(100% - 45px)

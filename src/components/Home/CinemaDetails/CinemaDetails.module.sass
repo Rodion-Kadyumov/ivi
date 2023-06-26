@@ -1,0 +1,64 @@
+@use "/src/styles/vars"
+
+.section
+    padding: 24px 0
+    overflow: hidden
+    &__container
+        width: 80%
+
+    &__title
+        font-size: 20px
+        font-style: normal
+        font-weight: 700
+        line-height: 24px
+        color: vars.$whiteTextColor
+
+    &__container
+        width: 80%
+
+    &__title
+        color: vars.$whiteTextColor
+        font-size: 20px
+
+.list
+    &__item
+        margin-left: 12px
+        padding-left: 16px
+        position: relative
+        color: vars.$secondaryColor
+        margin-top: 8px
+
+        &::before
+            content: ''
+            position: absolute
+            display: block
+            width: 6px
+            height: 6px
+            border-radius: 100%
+            background: vars.$secondaryColor
+            left: 0
+            top: 11px
+
+.dropdown
+    margin-top: 12px
+
+    &__paragraph
+        color: vars.$secondaryColor
+        margin-top: 8px
+
+        &:first-child
+            margin-top: 0
+
+.dropdown__toggle
+    color: #ffffffe0
+    font-weight: 500
+    &:hover
+        color: vars.$whiteTextColor
+
+@media (max-width: 1019px)
+    .section__container
+        width: 100%
+
+@media (max-width: 600px)
+    .section__title
+        font-size: 15px

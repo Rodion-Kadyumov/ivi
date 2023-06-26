@@ -1,0 +1,56 @@
+.mobile
+  padding: 24px 0
+
+  &__row
+    display: flex
+    justify-content: space-between
+
+  &__content
+    width: 66%
+
+  &__buttons
+    width: 34%
+    padding-left: 40px
+
+  &__title
+    margin-bottom: 20px
+
+.button
+  width: 100%
+  margin-bottom: 16px
+  &__text
+    margin-left: 6px
+
+  &__icon
+    display: flex
+    align-items: center
+    &::after
+      font-family: var(--iconfont)
+      font-weight: 400
+      font-style: normal
+      font-size: 16px
+
+    &_film::after
+      content: "\E07B"
+
+.badge
+  &:not(:first-child)
+    margin-left: 8px
+
+.option
+  span
+    margin-left: 8px
+
+@media (max-width: 880px)
+  .mobile
+    &__row
+      flex-direction: column-reverse
+    &__content
+      width: 100%
+
+    &__buttons
+      width: 100%
+      padding: 0
+
+    &__title
+      text-align: center

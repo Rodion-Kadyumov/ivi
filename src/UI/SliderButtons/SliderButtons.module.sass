@@ -1,0 +1,74 @@
+@use "src/styles/vars"
+
+.button
+    background: none
+    cursor: pointer
+    z-index: 3
+    position: absolute
+    height: 100%
+    width: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    bottom: 0
+
+    &:active
+        .button__icon
+            transform: scale(.6)
+
+    &:hover
+        opacity: 1
+
+    &__icon
+        opacity: 0.72
+        transition: .2s
+        &::after
+            font-family: var(--ivi-icons)
+            font-style: normal
+            font-size: 30px
+            color: vars.$whiteTextColor
+
+        &_prev::after
+            content: '\E009'
+
+        &_next::after
+            content: "\e00b"
+
+    &_prev
+        left: -40px
+
+    &_next
+        right: -40px
+
+    &_prev:hover
+        .button__icon_prev
+            opacity: 1
+
+    &_next:hover
+        .button__icon_next
+            opacity: 1
+
+    &_next:active
+        .button__icon_next
+            transform: scale(.6)
+
+    &_prev:active
+        .button__icon_prev
+            transform: scale(.6)
+
+@media (max-width: 1350px)
+    .button_next
+        right: -26px
+
+    .button_prev
+        left: -26px
+
+@media (max-width: 600px)
+    .button__icon::after
+        font-size: 20px
+
+    .button_next
+        right: -26px
+
+    .button_prev
+        left: -26px

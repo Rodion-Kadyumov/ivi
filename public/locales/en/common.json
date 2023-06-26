@@ -1,0 +1,19 @@
+{
+  "breadcrumbs": {
+    "/": "Home",
+    "/movies/": "Movies",
+    "/person": "Actor"
+  },
+  "tooltips": {
+    "save": "Watch later",
+    "similar": "Similar",
+    "estimate": "Already watched, rate",
+    "block": "Don't like this"
+  },
+  "more": "Show more",
+  "not_found": {
+    "title": "Page not found",
+    "content": "This page does not exist",
+    "link": "Go back to the home page ?"
+  }
+}

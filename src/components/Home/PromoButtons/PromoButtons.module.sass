@@ -1,0 +1,63 @@
+@use "src/styles/vars"
+
+.section
+    padding: 24px 0
+    overflow: hidden
+
+    .row
+        display: flex
+        justify-content: space-between
+
+    .link
+        display: block
+        align-items: center
+        justify-content: center
+        width: calc( 50% - 12px )
+        .button
+            width: 100%
+
+    .button
+        border-radius: 8px
+        color: vars.$whiteTextColor
+        text-decoration: none
+        text-align: center
+        display: flex
+        align-items: center
+        justify-content: center
+        width: calc( 50% - 12px )
+        transition: .3s
+        border: none
+        height: 48px
+
+        &_subscribe
+            background-image: url('/images/promoButtonPattern.svg')
+            background-size: auto 48px
+
+        &__icon
+            margin-right: 8px
+
+.arrow_right
+    font-family: var(--ivi-icons)
+    font-style: normal
+    &::after
+        content: '\E00B'
+        font-family: var(--ivi-icons)
+        font-style: normal
+
+@media (max-width: 880px)
+    .section
+        .row
+            flex-direction: column
+
+        .button
+            width: 100%
+
+        .link
+            width: 100%
+            margin-bottom: 16px
+            &:last-child
+                margin-bottom: 0
+
+@media (max-width: 342px)
+    .button__icon_present
+        display: none

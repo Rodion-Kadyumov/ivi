@@ -1,0 +1,54 @@
+@use "src/styles/vars"
+
+.header
+  &__container
+    width: 100vw
+
+  &__content
+    display: flex
+    height: 53px
+    background-color: #100e19
+    opacity: 1
+    justify-content: center
+    align-items: center
+
+  &__text
+    text-align: center
+
+  &__title
+    color: vars.$whiteTextColor
+    font-size: 15px
+    line-height: 20px
+    font-weight: 700
+
+  &__button
+    position: absolute
+    right: 40px
+    display: flex
+    width: 20px
+    height: 20px
+    background: none
+    color: rgba(255, 255, 255, .80)
+    font-family: var(--iconfont)
+    transition: .3s
+
+    &:before
+      font-size: 20px
+      cursor: pointer
+      content: "\E093"
+
+    &:hover
+      color: vars.$whiteTextColor
+
+    .progress__bar
+      height: 100%
+      background-color: #ea003d
+      transition: .3s
+
+@media (max-width: 400px)
+  .header
+    &__content
+      padding-inline: 10px
+      justify-content: space-between
+    &__button
+      position: unset

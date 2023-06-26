@@ -1,0 +1,30 @@
+.movie
+  padding: 24px 0
+
+  &__title
+    text-transform: capitalize
+
+  &:not(:last-child)
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16)
+
+.form
+  display: flex
+  flex-direction: column
+  margin-top: 16px
+  &__title
+    font-weight: 500
+
+.input
+  margin-top: 12px
+  display: flex
+  align-items: center
+  width: 100%
+  gap: 10px
+
+  & > :nth-child(1)
+    width: 80%
+
+  & > :nth-child(2)
+    min-width: 20%
+    width: auto
+    margin: 0

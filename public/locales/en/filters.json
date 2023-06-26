@@ -1,0 +1,32 @@
+{
+  "genre": "Genres",
+  "country": "Countries",
+  "year": "Years",
+  "rating": "Kinopoisk rating",
+  "ratingCount": "Ratings count",
+  "from": "from",
+  "ratingFrom": "Kinopoisk rating from",
+  "ratingCountFrom": "Ratings count from",
+  "person": {
+    "actor": "Actors",
+    "director": "Directors"
+  },
+  "reset": {
+    "filters": "Reset filters",
+    "page": "Reset page"
+  },
+  "all": {
+    "genres": "All genres",
+    "countries": "All countries",
+    "year": "All years",
+    "rating": "Any ratings",
+    "assessments": "Any ratings count",
+    "actor": "All actors",
+    "director": "All directors"
+  },
+  "search": "Searching...",
+  "loading": "Loading...",
+  "actornotfound": "Actors not found",
+  "directornotfound": "Directors not found",
+  "movienotfound": "Movies not found"
+}

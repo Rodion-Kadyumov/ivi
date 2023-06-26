@@ -1,0 +1,25 @@
+@use "/src/styles/mixins"
+
+.container
+  width: 290px
+  .socials
+    margin-top: 20px
+    &__link
+      width: 100%
+    &__btn
+      width: 100%
+      margin-top: 10px
+      font-size: 20px
+      .icon__container
+        display: flex
+        align-items: center
+        gap: 20px
+        padding-left: 20px
+        width: 100%
+        .text
+          font-size: 12px
+
+
+@media (max-width: 600px)
+  .container
+    width: 100%

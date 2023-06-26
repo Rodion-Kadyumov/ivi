@@ -1,0 +1,30 @@
+@use '/src/styles/vars'
+
+.toggle
+  margin-top: 8px
+  &__button
+    color: vars.$primaryColor
+    background: none
+    cursor: pointer
+    font-size: 15px
+    transition: .3s
+
+    &:hover
+      color: vars.$whiteTextColor
+
+.dropdown
+  &>:first-child
+    overflow: hidden
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 4
+    text-overflow: ellipsis
+
+  &>:not(:first-child)
+    display: none
+
+  &_active>:not(:first-child)
+    display: block
+
+  &_active>:first-child
+    display: block

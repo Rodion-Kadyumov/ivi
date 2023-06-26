@@ -1,0 +1,107 @@
+@use '/src/styles/vars'
+
+.medallions
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  grid-gap: 4px
+  justify-items: center
+  align-items: flex-start
+  margin-bottom: 24px
+  padding: 0 12px
+  overflow: hidden
+  height: 96px
+
+.medallion
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  min-width: 72px
+  max-width: 90px
+
+  &:hover
+    .medallion__wrapper
+      background-color: rgba(255, 255, 255, .24)
+
+    .medallion__text
+      color: vars.$whiteTextColor
+
+  &__wrapper
+    background-color: rgba(255, 255, 255, .16)
+    width: 56px
+    height: 56px
+    border-radius: 12px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: .3s
+
+  &__grade
+    height: 44px
+    width: 44px
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 8px
+    color: vars.$whiteTextColor
+    &_fine
+      background-color: #73a32f
+
+  &__avatar
+    width: 44px
+    height: 44px
+    border-radius: 8px
+    object-fit: cover
+
+  &__title
+    text-align: center
+    font-size: 13px
+    color: vars.$primaryColor
+    line-height: 16px
+    transition: .3s
+    text-overflow: ellipsis
+    overflow: hidden
+    white-space: nowrap
+    font-weight: 400
+    width: 90%
+    &:not(:last-child)
+      margin-top: 8px
+
+@media (max-width: 1160px)
+  .medallions
+    grid-template-columns: repeat(6, 1fr)
+
+@media (max-width: 600px)
+  .medallion
+    min-width: 62px
+    max-width: 72px
+    max-height: 72px
+
+    &__wrapper
+      width: 44px
+      height: 44px
+
+    &__grade, &__avatar
+      width: 36px
+      height: 36px
+
+    &__title
+      font-size: 10px
+      line-height: 12px
+      &:not(:last-child)
+        margin-top: 4px
+
+  .medallions
+    max-height: 72px
+    padding: 0
+
+@media (max-width: 510px)
+  .medallions
+    grid-template-columns: repeat(5, 1fr)
+    max-height: 72px
+
+@media (max-width: 400px)
+  .medallions
+    grid-template-columns: repeat(4, 1fr)
+    max-height: 72px
